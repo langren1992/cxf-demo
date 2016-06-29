@@ -9,7 +9,8 @@
 
      <context-param>
 	     <param-name>contextConfigLocation</param-name>
-	     <param-value>classpath:application.xml</param-value>
+	     <!-- <param-value>classpath:application.xml</param-value> -->
+	     <param-value>classpath:application-rest.xml</param-value>
      </context-param>
 
        <listener>
@@ -29,5 +30,16 @@
                <servlet-name>CXFServlet</servlet-name>
                <url-pattern>/webservice/*</url-pattern>
         </servlet-mapping>
-
+	
+	<!-- ======================== LOG4J 开始======================== -->
+	<!-- 配置日志输出在控制台 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>classpath:log4j.properties</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<!-- ======================== LOG4J 结束======================== -->
+	
 </web-app>

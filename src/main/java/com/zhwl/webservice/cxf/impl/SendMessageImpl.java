@@ -1,4 +1,4 @@
-package com.zhwl.webservice.cxf.impl;
+/*package com.zhwl.webservice.cxf.impl;
 
 import java.util.List;
 import java.util.Map;
@@ -40,3 +40,4 @@ public class SendMessageImpl implements SendMessage{
 	}
 
 }
+*/
