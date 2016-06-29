@@ -16,6 +16,10 @@
         <constructor-arg type="java.lang.String" value="http://localhost:8081/cxf-demo/webservice/rest/" />
     </bean>
     
+    <bean id="messageWebClient" class="org.apache.cxf.jaxrs.client.WebClient" factory-method="create">
+        <constructor-arg type="java.lang.String" value="http://localhost:8081/cxf-demo/webservice/rest/" />
+    </bean>
+    
     <bean id="restSampleBean" class="org.apache.cxf.jaxrs.client.JAXRSClientFactory" factory-method="create">
 	    <constructor-arg type="java.lang.String" value="http://localhost:8081/cxf-demo/webservice/rest/" />
 	    <constructor-arg type="java.lang.Class" value="com.hoo.service.RESTSample" />

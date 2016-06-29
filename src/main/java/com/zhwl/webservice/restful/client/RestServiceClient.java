@@ -94,27 +94,30 @@ public class RestServiceClient {
 	
 	public static void main(String[] args) throws IOException {
 		// 手动创建
-		RestSample sample = JAXRSClientFactory.create("http://localhost:8081/cxf-demo/webservice/rest", RestSample.class);
+//		RestSample sample = JAXRSClientFactory.create("http://wt.3tong.net", RestSample.class);
 		 
 		// 从Spring Ioc容器中拿webClient对象
 //		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext-client.xml");
 //		RestSample sample = ctx.getBean("restSampleBean", RestSample.class);
 		 
-		System.out.println(sample);
-		 
-		System.out.println(sample.doGet());
-		//System.out.println(sample.doRequest("haha", null, null));
-		System.out.println(sample.getBean(22));
-		System.out.println(sample.getList());
-		System.out.println(sample.getMap().getMap());
-		User user = new User();
-		user.setId(21432134);
-		user.setAddress("hoojo#gz");
-		user.setEmail("hoojo_@126.com");
-		user.setName("hoojo");
-		System.out.println(sample.postData(user));
-		System.out.println(sample.putData(111, user));
-		sample.deleteData(2);
+//		System.out.println(sample);
+//		 
+//		System.out.println(sample.doGet());
+//		//System.out.println(sample.doRequest("haha", null, null));
+//		System.out.println(sample.getBean(22));
+//		System.out.println(sample.getList());
+//		System.out.println(sample.getMap().getMap());
+//		User user = new User();
+//		user.setId(21432134);
+//		user.setAddress("hoojo#gz");
+//		user.setEmail("hoojo_@126.com");
+//		user.setName("hoojo");
+//		System.out.println(sample.postData(user));
+//		System.out.println(sample.putData(111, user));
+//		sample.deleteData(2);
+		
+		
+//		WebServiceXmlClientUtil.setServerUrl("http://3tong.net/services/sms");
 	}
 
 }
